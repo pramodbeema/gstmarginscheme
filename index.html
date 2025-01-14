@@ -148,16 +148,16 @@
                 id: 'unregToReg',
                 question: 'Is this an Intra-State or Inter-State sale?',
                 options: [
-                    { text: 'Intra-State', result: 'No GST Charged by the seller as it is exempted if the Registered Used Cars Dealer further supplies such used car (received from Unregistered person) under Margin Scheme (Notification No. 10/2017 – Central (Tax Rate) dated 28.06.2017). However if the Registered Dealer does not opt for Margin Scheme for further supplies, even then No GST is applicable since (a) Seller is Unregistered and (b) RCM Not Applicable since not yet notified.' },
-                    { text: 'Inter-State', result: 'No GST Charged by the seller since: (a) Seller is Unregistered and (b) RCM Not Applicable since not yet notified) by the CBIC.' },
+                    { text: 'Intra-State', result: 'GST is not collected by the seller since the Registered person further supplies the used car under Margin Scheme (Notification No. 10/2017 – Central (Tax Rate) dated 28.06.2017). Further, if the Registered person does not opt for Margin scheme for their further supplies, neither there is a possibility for the seller to collect GST becuase of no registration nor the purchaser (Registered dealer) pays GST under RCM (because not notified by CBIC to pay RCM).' },
+                    { text: 'Inter-State', result: 'GST is not collected by the seller since: (a) Seller is Unregistered and (b) RCM Not Applicable since not yet notified) by the CBIC.' },
                 ],
             },
             regToUnreg: {
                 id: 'regToUnreg',
-                question: 'Which scheme does the Registered Dealer choose?',
+                question: 'Which option does the Registered Dealer chose?',
                 options: [
-                    { text: 'Margin Scheme', result: 'GST is charged at 18% on the Positive Margin (Sale-Purchase). However, it is to be noted that the Registered Dealer should not avail ITC to opt into this Margin Scheme.' },
-                    { text: 'Opt-out of Margin Scheme', result: 'GST is charged at 18% on the entire sale price.' },
+                    { text: 'Opted for Margin Scheme', result: 'GST is charged at 18% on the Positive Margin (Sale-Purchase). However, it is to be noted that the Registered Dealer should not avail ITC to opt into this Margin Scheme.' },
+                    { text: 'Opted-out of Margin Scheme', result: 'GST is charged at 18% on the entire sale price.' },
                 ],
             },
             regToReg: {
