@@ -1,6 +1,3 @@
-# gstmarginscheme
-This repository hosts an interactive HTML page simplifying GST treatment on used car sales under the Margin Scheme. No prior GST knowledge is needed.
-
 # GST on Used Car Sales (Margin Scheme)
 
 This repository contains an interactive HTML page designed to help individuals understand and calculate Goods and Services Tax (GST) on the sale of used (second-hand) cars under the Margin Scheme. 
