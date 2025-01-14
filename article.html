@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GST Implications on Used Cars</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Light grey background */
+            color: #2a2a2a;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+            background-color: #ffffff; /* White container */
+            border-radius: 10px; /* Rounded corners */
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .key-provisions {
+            background-color: #e5e7eb; /* Light grey box */
+            padding: 15px;
+            border-radius: 10px; /* Rounded corners */
+            margin-bottom: 20px;
+        }
+        h1, h2, h3, h4 {
+            color: #dc1a22; /* Red headings */
+        }
+        .center-text {
+            text-align: center;
+        }
+        .watermark {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(255, 255, 255, 0.7); /* Subtle background */
+            border: 1px solid #e5e7eb; /* Light gray border */
+            padding: 5px;
+            border-radius: 5px; /* Rounded corners */
+            font-size: 14px;
+            color: #dc1a22; /* Change text color to red */
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Drop shadow */
+        }
+
+        .feedback-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: #dc1a22; /* Red background */
+            color: white; /* White text */
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer;
+        }
+
+        .feedback-button:hover {
+            background-color: #b01216; /* Darker red on hover */
+        }
+        .modal-overlay {
+            display: none; /* Hidden by default */
+            position: fixed; 
+            z-index: 1000; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgba(0,0,0,0.6); /* Blurred background */
+        }
+
+        .modal-content {
+            background-color: #ffffff; /* White background */
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px; /* Rounded corners */
+            width: 300px; /* Set width of modal */
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        .feedback-email {
+            color: #dc1a22; /* Red color for email link */
+        }
+
+        .option-btn {
+            background-color: #dc1a22; /* Red button */
+            color: white; /* White text */
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px; /* Rounded corners */
+        }
+
+        /* Questionnaire Style */
+        .questionnaire {
+            background-color: #e5e7eb;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .questionnaire h3 {
+            margin-bottom: 10px;
+        }
+
+        .questionnaire label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        .questionnaire input[type="text"], .questionnaire select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .questionnaire button {
+            background-color: #dc1a22;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .questionnaire button:hover {
+            background-color: #b01216;
+        }
+
+        .result {
+            background-color: #d1fae5;
+            padding: 20px;
+            border-radius: 10px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="watermark">Made by Beema's Fincon</div>
+<button class="feedback-button" onclick="openFeedbackModal()">Feedback 💬</button>
+
+<div class="container">
+    <h1 class="center-text">GST Implications on the Sale and Purchase of Used Cars</h1>
+
+    <!-- Existing Sections -->
+
+    <div class="section key-provisions">
+        <h2 class="center-text" style="text-decoration: underline;">Key Provisions and Understanding</h2>
+        <h3>Margin Scheme (Rule 32(5), CGST Rules, 2017):</h3>
+        <p>Registered dealers engaged in the buying and selling of second-hand cars have the option to use the Margin Scheme. Under this scheme:</p>
+        <ul>
+            <li>GST is levied only on the positive margin (sale price exceeding the purchase price).</li>
+            <li>Input Tax Credit (ITC) cannot be availed on the purchase of such used cars.</li>
+        </ul>
+        <h3>Exemption for Intra-State Purchases by Registered Dealers</h3>
+        <p><span class="highlight">Notification No. 10/2017 – Central Tax (Rate), dated 28.06.2017:</span></p>
+        <p>Intra-state sales of used cars by unregistered persons to registered dealers dealing in second-hand cars under the Margin Scheme are exempt from GST.</p>
+    </div>
+
+    <div class="section">
+        <h2 class="center-text">Scenarios and GST Implications</h2>
+        <h3>1. Sale Between Mukesh and Dinesh (Both Unregistered Persons):</h3>
+        <p><strong>Intra-State Sale:</strong> No GST implications arise since both parties are unregistered.</p>
+        <p><strong>Inter-State Sale:</strong> If Mukesh is selling the car in the course of business, Section 24 of the CGST Act, 2017, may apply, requiring Mukesh to register under GST and charge 18% GST. However, if Mukesh sells the car as a personal asset, GST is not applicable.</p>
+
+        <h3>2. Sale from Unregistered Individual to Registered Dealer (e.g., Mukesh to Spinny):</h3>
+        <p><strong>Intra-State Sale:</strong> No GST is charged by Mukesh as the supplier is unregistered, and the sale falls under the exemption provided in Notification No. 10/2017.</p>
+        <p><strong>Inter-State Sale:</strong> GST does not apply even in inter-state sales since:</p>
+        <ul>
+            <li>Mukesh is unregistered, and</li>
+            <li>Reverse Charge Mechanism (RCM) is not applicable as RCM on such transactions has not been notified by CBIC.</li>
+        </ul>
+
+        <h3>3. Sale by Registered Dealer (e.g., Spinny)</h3>
+        <p><strong>Sale to Unregistered Individual (e.g., Dinesh):</strong></p>
+        <ul>
+            <li>Opt for Margin Scheme: GST @ 18% is collected only on the positive margin (sale price – purchase price).</li>
+            <li>Opt-out of Margin Scheme: GST @ 18% is levied on the entire sale price.</li>
+        </ul>
+        <p><strong>Sale to Another Registered Dealer (e.g., Cars24):</strong></p>
+        <ul>
+            <li>If Spinny opts for the Margin Scheme, GST @ 18% is levied on the positive margin.</li>
+            <li>If Spinny opts out of the Margin Scheme, GST @ 18% is charged on the sale price.</li>
+        </ul>
+
+        <h4>Further Sale by Cars24:</h4>
+        <p>Under the Margin Scheme, Cars24 can both buy and sell used cars while paying GST only on the profit margin. However, if they claim input tax credit (ITC) on any used car purchase, they lose the eligibility to use the Margin Scheme for any subsequent sales.</p>
+    </div>
+
+    <!-- Questionnaire Section -->
+    <div class="section questionnaire">
+        <h3 class="center-text">GST Knowledge Check</h3>
+        <form id="questionnaireForm">
+            <label for="question1">1. Which scheme is available to the sale of second-hand cars by registered dealers?</label>
+            <select id="question1" required>
+                <option value="">Select an option</option>
+                <option value="Margin Scheme">Margin Scheme</option>
+                <option value="Regular Scheme">Regular Scheme</option>
+            </select>
+
+            <label for="question2">2. Is Input Tax Credits (ITC) allowed on the purchase of used cars under the Margin Scheme?</label>
+            <select id="question2" required>
+                <option value="">Select an option</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="result" class="result">
+            <p id="resultMessage"></p>
+        </div>
+    </div>
+
+    <hr>
+    <div class="section">
+        <h2>Conclusion</h2>
+        <p>The GST treatment of used car transactions depends on the registration status of the parties, the use of the Margin Scheme, and compliance with ITC rules. The Margin Scheme is beneficial for registered dealers to reduce tax liability by levying GST only on the positive margin, but it comes with the condition of not claiming ITC on purchases. Careful consideration of these provisions ensures compliance while optimizing the GST burden.</p>
+    </div>
+</div>
+
+<div class="modal-overlay" id="feedbackModal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 class="modal-title">Share Your Feedback</h2>
+            <button class="close-modal" onclick="closeFeedbackModal()">&times;</button>
+        </div>
+        <div class="feedback-content">
+            <p>We value your feedback! Please send your suggestions and comments to:</p>
+            <a href="mailto:bp.beema@outlook.com" class="feedback-email">bp.beema@outlook.com</a>
+            <p>Your input helps us improve our service.</p>
+            <button class="option-btn" onclick="closeFeedbackModal()">Return to Application</button>
+        </div>
+    </div>
+</div>
+
+<script>
+function openFeedbackModal() {
+    document.getElementById('feedbackModal').style.display = 'block';
+}
+
+function closeFeedbackModal() {
+    document.getElementById('feedbackModal').style.display = 'none';
+}
+
+document.getElementById('questionnaireForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const answer1 = document.getElementById('question1').value;
+    const answer2 = document.getElementById('question2').value;
+
+    let resultMessage = 'Your answers:';
+
+    if (answer1 === 'Margin Scheme' && answer2 === 'No') {
+        resultMessage = 'Correct! The Margin Scheme applies, and ITC is not allowed.';
+    } else {
+        resultMessage = 'Some answers are incorrect. Review the content and try again!';
+    }
+
+    document.getElementById('resultMessage').textContent = resultMessage;
+    document.getElementById('result').style.display = 'block';
+});
+</script>
+</body>
+</html>
