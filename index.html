@@ -1,4 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GST Treatment Decision Tool</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            z-index: 50;
+        }
 
+        .modal.show {
+            display: flex;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-white relative">
+<button
+    onclick="window.location.href='article.html';"
+    class="fixed bottom-4 right-4 bg-[#dc1a22] text-white px-2 py-1 text-xs rounded-lg shadow-lg hover:bg-opacity-90 transition-colors"
+>
+    Article on Margin Scheme 📝️↗️
+</button>
+
+<!-- New Button to Redirect to Google Drive Link -->
+<button
+    onclick="window.location.href='https://drive.google.com/uc?id=1f6aTvUvJ_TEip4cLYWOAyxqsKvvL_ijb&export=download';"
+    class="fixed bottom-4 left-4 bg-[#0077b5] text-white px-2 py-1 text-xs rounded-lg shadow-lg hover:bg-opacity-90 transition-colors"
+>
+    Flow Chart 🔗↗️
+</button>
+
+    <!-- Watermark -->
+    <div class="fixed top-4 left-4 bg-white shadow-lg text-xs text-[#dc1a22] opacity-100 font-semibold transform -rotate-0 px-2 py-1 border (1px) border-[#dc1a22] border-opacity-72 rounded-lg">
+    Made by Beema's Fincon
+</div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-16">
+        <h1 class="text-3xl font-bold text-center text-[#dc1a22] mb-8">
+            GST Treatment on Used Cars 🚗
+		<p class="text-sm text-gray-600 opacity-54 text-center italic">
+		    (Margin scheme as per Rule 32(5) of CGST Rules, 2017)
+        </p>	
+        </h1>        
+        <div class="bg-gray-50 rounded-lg shadow-lg p-8 max-w-3xl mx-auto">
+            <button
+                id="backButton"
+                onclick="resetFlow()"
+                class="mb-6 text-gray-600 hover:text-[#dc1a22] flex items-center gap-2 transition-colors hidden"
+            >
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+                Start Over
+            </button>
+
+            <div id="questionContainer" class="mb-8">
+                <div class="flex items-center gap-2 mb-4">
+                    <h2 id="question" class="text-xl font-semibold text-gray-800"></h2>
+                    
+                </div>
+                <div id="options" class="space-y-4">
+                </div>
+            </div>
 
             <div id="result" class="bg-white p-6 rounded-lg border-l-4 border-[#dc1a22] hidden">
                 <h3 class="text-lg font-semibold text-gray-800 mb-2">Result:</h3>
