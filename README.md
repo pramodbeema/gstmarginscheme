@@ -1,6 +1,6 @@
 # GST on Used Car Sales (Margin Scheme) 🚗
 
-This repository contains an interactive HTML page designed to help individuals understand and understand Goods and Services Tax (GST) on the sale of used (second-hand) cars under the Margin Scheme. 
+This repository contains an interactive HTML page designed to help individuals understand Goods and Services Tax (GST) on the sale of used (second-hand) cars under the Margin Scheme. 
 
 **Key Features:**
 
